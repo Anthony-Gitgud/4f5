@@ -16,23 +16,35 @@
 // along with aquiletour.  If not, see <https://www.gnu.org/licenses/>
 
 
-rootProject.name = 'tutoriels4f5'
+package tut02.pages.partie;
 
-include 'tut01'
-include 'tut02'
-include 'tut03'
-include 'tut04'
-include 'tut05'
-include 'tut06'
-include 'tut07'
-include 'tut08'
-include 'tut09'
-include 'tut10'
+import javafx.application.Application;
+import javafx.stage.Stage;
+import ntro.debogage.J;
+import ntro.javafx.Initialisateur;
+import ntro.systeme.Systeme;
 
 
-// Tirée la librairie Ntro de GitHub
-sourceControl {
-    gitRepository("https://github.com/mathieu-bergeron/ntro4f5.git") {
-        producesModule("ca.ntro4f5:ntro")
-    }
+public class PagePartieLocale extends Application {
+
+	static {
+
+		Initialisateur.initialiser();
+		
+		J.appel(PagePartieLocale.class);
+	}
+
+	public static void main(String[] args) {
+		J.appel(PagePartieLocale.class);
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage fenetrePrincipale) throws Exception {
+		J.appel(this);
+		
+		J.ici();
+
+		Systeme.quitter();
+	}
 }

@@ -16,23 +16,32 @@
 // along with aquiletour.  If not, see <https://www.gnu.org/licenses/>
 
 
-rootProject.name = 'tutoriels4f5'
+package tut07.serveur;
 
-include 'tut01'
-include 'tut02'
-include 'tut03'
-include 'tut04'
-include 'tut05'
-include 'tut06'
-include 'tut07'
-include 'tut08'
-include 'tut09'
-include 'tut10'
+import ntro.debogage.J;
+import static tut07.Constantes.*;
 
+import java.io.IOException;
 
-// Tirée la librairie Ntro de GitHub
-sourceControl {
-    gitRepository("https://github.com/mathieu-bergeron/ntro4f5.git") {
-        producesModule("ca.ntro4f5:ntro")
-    }
+public class MonServeur {
+	
+	public static void main(String[] args) throws IOException, InterruptedException {
+		J.appel(MonServeur.class);
+		
+		demarrerServeur();
+	}
+	
+	private static void demarrerServeur() throws IOException, InterruptedException {
+		J.appel(MonServeur.class);
+		
+		MonServeurWebSocket serveur = new MonServeurWebSocket(PORT);
+		serveur.start();
+		
+        System.out.println("\n\nAppuyer sur Entrée pour quitter...");
+        
+        System.in.read();
+        
+        serveur.stop();
+	}
+
 }

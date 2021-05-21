@@ -16,23 +16,13 @@
 // along with aquiletour.  If not, see <https://www.gnu.org/licenses/>
 
 
-rootProject.name = 'tutoriels4f5'
+package tut08.commandes.choisir_taille_grille;
 
-include 'tut01'
-include 'tut02'
-include 'tut03'
-include 'tut04'
-include 'tut05'
-include 'tut06'
-include 'tut07'
-include 'tut08'
-include 'tut09'
-include 'tut10'
+import tut08.enumerations.TailleGrille;
+import ntro.commandes.CommandeRecue;
 
+public interface ChoisirTailleGrilleRecue extends CommandeRecue {
+	
+	TailleGrille getTailleGrille();
 
-// Tirée la librairie Ntro de GitHub
-sourceControl {
-    gitRepository("https://github.com/mathieu-bergeron/ntro4f5.git") {
-        producesModule("ca.ntro4f5:ntro")
-    }
 }

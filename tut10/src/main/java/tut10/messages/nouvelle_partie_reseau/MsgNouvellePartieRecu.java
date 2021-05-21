@@ -16,23 +16,13 @@
 // along with aquiletour.  If not, see <https://www.gnu.org/licenses/>
 
 
-rootProject.name = 'tutoriels4f5'
+package tut10.messages.nouvelle_partie_reseau;
 
-include 'tut01'
-include 'tut02'
-include 'tut03'
-include 'tut04'
-include 'tut05'
-include 'tut06'
-include 'tut07'
-include 'tut08'
-include 'tut09'
-include 'tut10'
+import tut10.pages.parametres.Parametres;
+import ntro.messages.MessageRecu;
 
+public interface MsgNouvellePartieRecu extends MessageRecu {
+	
+	Parametres getParametres();
 
-// Tirée la librairie Ntro de GitHub
-sourceControl {
-    gitRepository("https://github.com/mathieu-bergeron/ntro4f5.git") {
-        producesModule("ca.ntro4f5:ntro")
-    }
 }

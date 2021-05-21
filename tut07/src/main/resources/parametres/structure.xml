@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) (2020) (Mathieu Bergeron) (mathieu.bergeron@cmontmorency.qc.ca)
+//
+// This file is part of tutoriels4f5
+//
+// tutoriels4f5 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// tutoriels4f5 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with aquiletour.  If not, see <https://www.gnu.org/licenses/> -->
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import tut07.pages.partie.composants.CaseAjustable?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="center"
+    fx:controller="tut07.pages.parametres.VueParametres">
+
+	<VBox styleClass="conteneurVertical">
+		<HBox alignment="center">
+			<Text styleClass="texteQuiCommence" textAlignment="CENTER" text="%quelleTaille"/>
+		</HBox>
+		<VBox styleClass="petitEspace"/>
+		<HBox alignment="center">
+	        <ComboBox fx:id="choixTaille"/>
+		</HBox>
+		
+		<HBox alignment="center">
+			<Text styleClass="texteQuiCommence" textAlignment="CENTER" text="%quelleDifficulte"/>
+		</HBox>
+		<VBox styleClass="petitEspace"/>
+		<HBox alignment="center">
+	        <ComboBox fx:id="choixDifficulte"/>
+		</HBox>
+		
+		<HBox alignment="center">
+			<Text styleClass="texteQuiCommence" textAlignment="CENTER" text="%quelModeJeu"/>
+		</HBox>
+		<VBox styleClass="petitEspace"/>
+		<HBox alignment="center">
+	        <ComboBox fx:id="choixModeJeu"/>
+		</HBox>
+
+		<VBox styleClass="grosEspace"/>
+		<VBox styleClass="grosEspace"/>
+
+		<HBox alignment="center">
+			<Text styleClass="texteQuiCommence" textAlignment="CENTER" text="%quiCommence"/>
+		</HBox>
+		<VBox styleClass="petitEspace"/>
+
+		<VBox styleClass="conteneurQuiCommence">
+
+				<HBox styleClass="conteneurMarque" alignment="center">
+					<CaseAjustable 
+					    styleClass="marque" 
+					    fx:id="caseVert" 
+        	            couleurVert="#006600"
+        	            couleurOrange="#ff9900"/>
+					<HBox styleClass="petitEspace"/>
+					<CheckBox fx:id="checkVert"/>
+				</HBox>
+
+				<VBox styleClass="petitEspace"/>
+
+				<HBox styleClass="conteneurMarque" alignment="center">
+					<CaseAjustable 
+					    styleClass="marque" 
+					    fx:id="caseOrange" 
+        	            couleurVert="#006600"
+        	            couleurOrange="#ff9900"/>
+					<VBox styleClass="petitEspace"/>
+					<CheckBox fx:id="checkOrange"/>
+				</HBox>
+
+		</VBox>
+	</VBox>
+
+	<HBox styleClass="grosEspace"/>
+
+	<HBox styleClass="conteneurBouton" alignment="center">
+		<Button styleClass="bouton" text="%ok" fx:id="boutonOk"/>
+	</HBox>
+
+
+</VBox>

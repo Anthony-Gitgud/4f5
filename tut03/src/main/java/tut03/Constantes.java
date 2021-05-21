@@ -16,23 +16,21 @@
 // along with aquiletour.  If not, see <https://www.gnu.org/licenses/>
 
 
-rootProject.name = 'tutoriels4f5'
+package tut03;
 
-include 'tut01'
-include 'tut02'
-include 'tut03'
-include 'tut04'
-include 'tut05'
-include 'tut06'
-include 'tut07'
-include 'tut08'
-include 'tut09'
-include 'tut10'
+import tut03.enumerations.TailleGrille;
 
+public class Constantes {
+	
+	public static final String[] IDS_MODELES_TESTS = {"test01","test02","test03"};
 
-// Tirée la librairie Ntro de GitHub
-sourceControl {
-    gitRepository("https://github.com/mathieu-bergeron/ntro4f5.git") {
-        producesModule("ca.ntro4f5:ntro")
-    }
+	public static final int HAUTEUR_GRILLE_PETITE = 4;
+	public static final int HAUTEUR_GRILLE_MOYENNE = 6;
+	public static final int HAUTEUR_GRILLE_GRANDE = 10;
+
+	public static final int LARGEUR_GRILLE_PETITE = 4;
+	public static final int LARGEUR_GRILLE_MOYENNE = 5;
+	public static final int LARGEUR_GRILLE_GRANDE = 8;
+	
+	public static final TailleGrille TAILLE_GRILLE_PAR_DEFAUT = TailleGrille.PETITE;
 }

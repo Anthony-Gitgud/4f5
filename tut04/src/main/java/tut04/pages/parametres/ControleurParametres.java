@@ -16,23 +16,34 @@
 // along with aquiletour.  If not, see <https://www.gnu.org/licenses/>
 
 
-rootProject.name = 'tutoriels4f5'
+package tut04.pages.parametres;
 
-include 'tut01'
-include 'tut02'
-include 'tut03'
-include 'tut04'
-include 'tut05'
-include 'tut06'
-include 'tut07'
-include 'tut08'
-include 'tut09'
-include 'tut10'
+import ntro.debogage.J;
+import ntro.mvc.controleurs.ControleurModeleVue;
 
+public class   ControleurParametres 
+       extends ControleurModeleVue<ParametresLectureSeule, 
+                                   Parametres,
+                                   VueParametres,
+                                   AfficheurParametres> {
+	
+	@Override
+	protected void installerReceptionCommandes() {
+		J.appel(this);
+	}
 
-// Tirée la librairie Ntro de GitHub
-sourceControl {
-    gitRepository("https://github.com/mathieu-bergeron/ntro4f5.git") {
-        producesModule("ca.ntro4f5:ntro")
-    }
+	@Override
+	protected void demarrer() {
+		J.appel(this);
+	} 
+
+	@Override
+	protected void obtenirMessagesPourEnvoi() {
+		J.appel(this);
+	}
+
+	@Override
+	protected void installerReceptionMessages() {
+		J.appel(this);
+	}
 }

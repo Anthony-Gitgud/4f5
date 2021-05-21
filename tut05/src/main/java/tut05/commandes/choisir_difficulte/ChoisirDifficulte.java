@@ -16,23 +16,30 @@
 // along with aquiletour.  If not, see <https://www.gnu.org/licenses/>
 
 
-rootProject.name = 'tutoriels4f5'
+package tut05.commandes.choisir_difficulte;
 
-include 'tut01'
-include 'tut02'
-include 'tut03'
-include 'tut04'
-include 'tut05'
-include 'tut06'
-include 'tut07'
-include 'tut08'
-include 'tut09'
-include 'tut10'
+import tut05.enumerations.Difficulte;
+import ntro.commandes.Commande;
+import ntro.debogage.J;
 
+public class ChoisirDifficulte extends Commande<ChoisirDifficultePourEnvoi, ChoisirDifficulteRecue> 
+						   implements ChoisirDifficultePourEnvoi, ChoisirDifficulteRecue {
+	
+	private Difficulte difficulte;
 
-// Tirée la librairie Ntro de GitHub
-sourceControl {
-    gitRepository("https://github.com/mathieu-bergeron/ntro4f5.git") {
-        producesModule("ca.ntro4f5:ntro")
-    }
+	@Override
+	public Difficulte getDifficulte() {
+		J.appel(this);
+		
+		return difficulte;
+	}
+
+	@Override
+	public void setDifficulte(Difficulte difficulte) {
+		J.appel(this);
+		
+		this.difficulte = difficulte;
+	}
+	
+
 }
